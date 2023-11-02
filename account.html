@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - RedStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="imges/logo.png" alt="logo" width="125px">
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Account</a></li>
+                </ul>
+            </nav>
+            <img src="imges/cart.png" alt="cart" width="30px" height="30px">
+            <img src="imges/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+
+    <!-- heade part End  -->
+
+
+    <!-- Account Page Section -->
+
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="imges/image1.png" width="100%">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="indicator">
+                        </div>
+                        <form id="loginForm">
+                            <input type="text" placeholder="Enter UserName">
+                            <input type="password" placeholder="Enter Password">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="">Forgot password</a>
+                        </form>
+
+                        <form id="regForm">
+                            <input type="text" placeholder="Enter UserName">
+                            <input type="email" placeholder="Enter Email">
+                            <input type="password" placeholder="Enter Password">
+                            <button type="submit" class="btn">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+        <!-- Footer Section -->
+
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>DownLoad Our APP</h3>
+                        <p>DownLoad App for Android and ios mobile phone</p>
+                        <div class="app-logo">
+                            <img src="imges/play-store.png">
+                            <img src="imges/app-store.png">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="imges/logo-white.png" alt="">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Plicy</li>
+                            <li>Join Affiliate</li>
+                        </ul>
+
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li>facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>Youtube</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <hr>
+                <p class="CopyRight">CopyRight @Rohan_J</p>
+            </div>
+        </div>
+
+        <!--  JavaScript for toggle Menu -->
+        <script>
+            var menuItems = document.getElementById("menuItems");
+            menuItems.style.maxHeight = "0px";
+
+            function menutoggle() {
+                if (menuItems.style.maxHeight == "0px") {
+
+                    menuItems.style.maxHeight = "200px"
+                }
+                else {
+                    menuItems.style.maxHeight = "0px"
+                }
+            }
+        </script>
+
+<!-- Js for Toggle form -->
+
+<script>
+    var loginForm= document.getElementById("loginForm")
+    var regForm= document.getElementById("regForm")
+    var indicator=document.getElementById("indicator")
+
+    function register(){
+        regForm.style.transform = "translateX(0px)";
+        loginForm.style.transform = "translateX(0px)";
+        indicator.style.transform = "translateX(140px)";
+    }
+
+    function login(){
+        regForm.style.transform = "translateX(290px)";
+        loginForm.style.transform = "translateX(380px)";
+        indicator.style.transform = "translateX(0px)";
+
+    }
+</script>
+
+</body>
+
+</html>
